@@ -106,3 +106,4 @@ def test_some_primes():
         for num in range(2, 50)
         
     }
+    print("EOD")
