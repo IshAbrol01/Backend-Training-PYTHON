@@ -83,8 +83,8 @@ class UT(unittest.TestCase):
         a="CubexO Software Solutions"
         self.assertEqual(a.split(),['CubexO','Software','Solutions'])
     
-# if __name__ == '__main__':
-#     unittest.main()
+if __name__ == '__main__':
+    unittest.main()
 
 
 # PyTest
