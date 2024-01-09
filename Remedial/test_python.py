@@ -1,3 +1,4 @@
+# <<<<<<< Day-4Python
 # PyTest and UnitTest Remedial
 
 import unittest
@@ -81,3 +82,5 @@ def test_isEven(num):
     '''
 
     # to run a specific functio of test we use command :- pytest -k <test_function_name>
+# =======
+# >>>>>>> main
