@@ -46,7 +46,7 @@ def test_checkSqr():
 #   :-  Parameterizing of a test is done to test the code snippet against 
 #       multiple input to check for its robustness and scalability
     
-@pytest.mark.parametrize("num",[2,4,1,3,6])
+@pytest.mark.parametrize("num",[2,4,10,30,6])
 @pytest.mark.even
 def test_isEven(num):
     assert  num%2==0
@@ -76,5 +76,8 @@ def test_isEven(num):
 
     '''
     Print Test Result in XMl format
-    
+    command :- file_name.py -v --junitxml="result_file_name.xml"
+
     '''
+
+    # to run a specific functio of test we use command :- pytest -k <test_function_name>
