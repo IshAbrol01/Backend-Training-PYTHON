@@ -44,6 +44,11 @@ class dummy_API:
     def dummy_headers():
         response_headers=requests.get("https://dummy.restapiexample.com/api/v1/employees")
         return dict(response_headers.headers)
+    
+    def dummy_error_code():
+        response = requests.get("https://dummy.restapiexample.com/api/v1/employeess")
+        return response.status_code
+    
 
 
 

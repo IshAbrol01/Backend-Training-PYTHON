@@ -1,6 +1,19 @@
 import script
 import pytest
 
+
+"""
+This file contains Negative and Positive test
+ <<< use fixture [status.code] to test positive STATUS CODE response of all APIs >>>
+
+ <<< use fixture [header] to test positive HEADER response of all APIs >>>
+
+ <<< use fixture [text] to test positive TEXT response of all APIs >>>
+
+ <<< use ficture [error] to test negative US CODE response of all APIs >>>
+ note:- if the test function named :- (test_negative_w3_code) returs rsult as PASSES, it means the API is NOT working
+"""
+
 @pytest.mark.staus_code
 def test_w3_status_code():
         result=script.w3schools_API.w3_status_code()
@@ -24,7 +37,8 @@ def test_w3_header():
                           'X-Content-Security-Policy': "frame-ancestors 'self' https://mycourses.w3schools.com;" , 
                           'X-Powered-By': 'ASP.NET' , 
                           'Content-Length': '78'}
-        
+
+@pytest.mark.error
 def test_negative_w3_code():
         result=script.w3schools_API.w3_error_code()
         assert result == 404
@@ -52,6 +66,9 @@ def test_status_code():
         result=script.dummy_API.dummy_status_code()
         assert result == 200
 
+def test_negative_dummy_status_code():
+        result=script.dummy_API.dummy_error_code()
+        assert result == 406
     
 @pytest.mark.header
 def test_header():
