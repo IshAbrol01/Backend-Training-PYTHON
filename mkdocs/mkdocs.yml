@@ -1,0 +1,8 @@
+site_name: MkDocs Module
+# curl : 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md
+nav :
+ - Home : home.md
+ - About : about.md
+ - Contact Us : contact.md
+ - Ish : ish.md
+theme : readthedocs
