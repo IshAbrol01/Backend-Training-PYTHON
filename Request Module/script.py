@@ -1,6 +1,6 @@
 import requests
 import pytest
-x=requests.get("https://w3schools.com/python/demopage.htm")
+# x=requests.get("https://w3schools.com/python/demopage.htm")
 
 # print(x)
 # print(x.text)
@@ -17,6 +17,10 @@ class w3schools_API:
     def w3_status_code():
         response_w3_staus_code=requests.get("https://w3schools.com/python/demopage.htm")
         return response_w3_staus_code.status_code
+    
+    def w3_error_code():
+        response=requests.get("https://w3schools.com/python/demopage.html")
+        return response.status_code
     
     def w3_headers():
         response_w3_headers=requests.get("https://w3schools.com/python/demopage.htm")
@@ -40,12 +44,6 @@ class dummy_API:
     def dummy_headers():
         response_headers=requests.get("https://dummy.restapiexample.com/api/v1/employees")
         return dict(response_headers.headers)
-    
-
-
-
-
-
 
 
 
