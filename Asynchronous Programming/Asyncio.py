@@ -150,8 +150,11 @@ class asynchronous:
     def __init__(self):
         
         asyncio.run(self.a_api_1_movies())
+        print("_________")
+        time.sleep(5)
         # await self.a_api_1_movies()
         asyncio.run(self.a_api_2_blogs())
+        print("_________________")
         # await self.a_api_2_blogs()
         asyncio.run(self.a_api_3_user())
         # await self.a_api_3_user()
